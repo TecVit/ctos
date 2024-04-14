@@ -13,51 +13,6 @@ const Loading = () => {
   
     const navigate = useNavigate();
   
-    // Verifica o status da permissão
-    navigator.permissions.query({ name: 'camera' })
-        .then(function(permissionStatus) {
-            if (permissionStatus.state === 'granted') {
-                console.log('Permissão já concedida');
-            } else {
-                
-                swal({
-                    title: "Permissão de áudio e vídeo",
-                    text: "Este site deseja acessar o seu áudio e vídeo. Você concede permissão?",
-                    icon: "warning",
-                    buttons: {
-                        cancel: "Não",
-                        confirm: "Sim",
-                    },
-                }).then( async (value) => {
-                    if (value) {
-                        try {
-                            // O usuário concedeu permissão, solicita acesso ao áudio e vídeo
-                            await navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-                                .then(function(stream) {
-                                    console.log('Permissão concedida');
-                                    window.location.reload();
-                                })
-                                .catch(function(error) {
-                                    // O usuário negou a permissão ou ocorreu um erro
-                                    console.error('Permissão negada ou erro:', error);
-                                });    
-                        } catch (error) {
-                            navigate('/login');
-                        }
-                        
-                    } else {
-                        console.log('Permissão negada');
-                        // O usuário negou a permissão
-                    }
-                });
-            }
-        })
-        .catch(function(error) {
-            console.error('Erro ao verificar permissão:', error);
-        });
-    
-
-
     useEffect(() => {
         const timeouts = [
             setTimeout(() => {
@@ -73,11 +28,7 @@ const Loading = () => {
   return (
     <main className="container-loading">
       
-        <video autoPlay loop>
-            <source src={require('../video/loading.mp4')} type="video/mp4" />
-            {/* Adicione outras fontes de vídeo, se necessário, para compatibilidade com navegadores diferentes */}
-            Seu navegador não suporta vídeo HTML5.
-        </video>
+        <img src={require('../video/loading.gif')} />
       
     </main>
   );
