@@ -45,9 +45,14 @@ const Software = () => {
         setMdCPFs(false);
     }
     
-    const handleSetCpf = (cpf) => {
+    const handleSetCpf = (valor) => {
         try {
-            if (/^\d+$/.test(cpf)) {
+            const cpf = valor.replace(/\D/g, '');
+            console.log(cpf)
+            if (valor.length === 0) {
+                setCPF('');
+                return;
+            } else if (/^\d+$/.test(cpf)) {
                 setCPF(cpf);
             }
         } catch (error) {
