@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Loading from './pages/Loading';
 import Login from './pages/Login';
+import Erro404 from './pages/Erro404';
+import Software from "./pages/Software";
 
 const App = () => {
 
@@ -15,14 +17,17 @@ const App = () => {
         
         {/* ROTAS DO APLICATIVO */}
         <Route 
-          path="/app/*" 
+          path="/software/*" 
           element={
             <div className="flex">
-              
+              <Routes>
+                <Route path="/" element={<Software />}/>
+                <Route path="/home" element={<Software />}/>
+              </Routes>
             </div>
         } />
 
-        {/* <Route path="/*" element={<PaginaErro />} /> */}
+        <Route path="/*" element={<Erro404 />} />
 
       </Routes>
     </Router>

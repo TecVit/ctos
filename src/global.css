@@ -116,3 +116,77 @@ html {
 .swal-icon--warning__body, .swal-icon--warning__dot {
   background-color: var(--red) !important;
 }
+
+
+
+
+/* FRAMEWORKS */
+
+/* FLEXBOX */
+
+*.flex {
+  display: flex !important;
+} *.row {
+  flex-direction: row !important;
+} *.column {
+  flex-direction: column !important;
+}
+
+/* INPUTS */
+.input-principal {
+  width: 100%;
+  height: 55px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 10px 14px;
+  color: var(--four);
+  background: var(--eleven);
+  border: 3px solid var(--eleven);
+  box-shadow: 3px 3px 2px var(--five);
+  outline: none;
+  margin: 12.5px 0px;
+}
+
+/* BTNS */
+.btn-principal {
+  width: max-content;
+  height: max-content;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 14px;
+  color: var(--one);
+  background: var(--eight);
+  border: 3px solid var(--eight);
+  box-shadow: 3px 3px 2px var(--four);
+  cursor: pointer;
+  outline: none;
+  margin: 10px 0px;
+} .btn-principal:hover,
+.btn-principal:focus {
+  background: transparent;
+  border: 3px solid var(--eleven);
+  color: var(--eleven);
+  box-shadow: 3px 3px 2px var(--four);
+}
+
+.btn-voltar {
+  width: max-content;
+  height: max-content;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 14px;
+  color: var(--eleven);
+  background: var(--red);
+  border: 3px solid var(--red);
+  box-shadow: 3px 3px 2px var(--eleven);
+  cursor: pointer;
+  outline: none;
+  margin: 10px 0px;
+} .btn-voltar:hover,
+.btn-voltar:focus {
+  background: var(--eleven);
+  border: 3px solid var(--eleven);
+  color: var(--red);
+  box-shadow: 3px 3px 2px var(--red);
+}

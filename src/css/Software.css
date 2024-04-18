@@ -1,0 +1,201 @@
+.container-software {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh);
+    position: relative;
+    background: #000;
+}
+
+.content-software {
+    width: 95%;
+    height: auto;
+    min-height: calc(100vh);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.content-software .apps {
+    width: 90%;
+    max-width: 460px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: auto;
+}
+
+.content-software .apps .app {
+    background: var(--four);
+    color: var(--eleven);
+    padding: 16px;
+    box-shadow: 3px 3px 2px var(--eleven);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 3px solid var(--four);
+} .content-software .apps .app:hover {
+    background: transparent;
+    border: 3px solid var(--eleven);
+    box-shadow: 3px 3px 2px var(--four);
+}
+
+.content-software .apps .app .icon {
+    margin: 5px auto;
+    font-size: 30px;
+}
+
+.content-software .apps .app p {
+    width: auto;
+    height: auto;
+    margin: 0px 0px 0px auto;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* SEARCHES */
+
+.content-software .searches {
+    width: 90%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.content-software .searches h1 {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-family: var(--glitch);
+}
+
+.dados {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--eleven);
+    background: #00090e;
+    border: 3px solid var(--eleven);
+    margin: 20px 0px 0px 0px;
+}
+
+.dados .top {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12.5px 0px;
+    margin: 0px auto;
+}
+
+.dados .top h1 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-family: var(--glitch);
+    margin: 0px auto 0px 0px;
+}
+
+.dados .top .icon {
+    margin: 0px 0px 0px 12px;
+    font-size: 20px;
+}
+
+.dados .title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #121d1f;
+    padding: 8px 5% 8px 5%;
+}
+
+.dados .title p {
+    max-width: 50%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dados .title p strong {
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    font-family: var(--glitch);
+}
+
+.dados .title a {
+    width: auto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3d484c;
+    text-align: end;
+    margin: 0px 0px 0px auto;
+}
+
+.dados .image {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #031217;
+    padding: 12.5px 0px;
+}
+
+.dados .image .icon {
+    font-size: 60px;
+    color: #7dbfcd;
+}
+
+.dados .description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5%;
+}
+
+.dados .description p {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px 0px;
+}
+
+.dados .description p strong {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-family: var(--glitch);
+}
+
+.dados .bottom {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5%;
+    position: relative;
+    margin: 0px;
+}
+
+.dados .bottom img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: 2.5%;
+    bottom: -22.5px;
+}

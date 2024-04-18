@@ -1,0 +1,46 @@
+@for $i from 0 through 100 {
+    .wd-#{$i} {
+        width: percentage($i / 100) !important;
+    }
+}
+
+@for $i from 0 through 500 {
+    .wd-#{$i}px {
+        width: #{$i}px !important;
+    }
+}
+
+// MAX WIDTH
+@for $i from 0 through 100 {
+    .mx-wd-#{$i} {
+        max-width: percentage($i / 100) !important;
+    }
+}
+
+@for $i from 0 through 1000 {
+    .mx-wd-#{$i}px {
+        max-width: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through 50 {
+    .mt-#{$i} {
+        margin-top: #{$i}px !important;
+    } .mr-#{$i} {
+        margin-right: #{$i}px !important;
+    } .mb-#{$i} {
+        margin-bottom: #{$i}px !important;
+    } .ml-#{$i} {
+        margin-left: #{$i}px !important;
+    }
+}
+
+.mt-auto {
+    margin-top: auto !important;
+} .mr-auto {
+    margin-right: auto !important;
+} .mb-auto {
+    margin-bottom: auto !important;
+} .ml-auto {
+    margin-left: auto !important;
+}
