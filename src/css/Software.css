@@ -69,6 +69,7 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    padding: 20px 0px;
 }
 
 .content-software .searches h1 {
@@ -76,6 +77,7 @@
     font-weight: 500;
     letter-spacing: 0.3px;
     font-family: var(--glitch);
+    margin: 15px 0px 10px 0px;
 }
 
 .dados {
@@ -202,16 +204,16 @@
 }
 
 /* MESSAGES */
-
 .content-software .messages {
     width: 90%;
     max-width: 400px;
-    height: 100%;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    padding: 30px 0px 130px 0px;
+    margin: 10px auto;
+    position: relative;
+    padding: 30px 0px 80px 0px;
 }
 
 .content-software .messages h1 {
@@ -232,7 +234,7 @@
     height: auto;
     margin: 5px auto 10px auto;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.4px;
     text-align: center;
     line-height: 30px;
@@ -281,20 +283,22 @@
 }
 
 .content-software .messages .input-message {
-    width: 100%;
+    width: 85%;
     max-width: 400px;
     height: auto;
     padding: 12.5px 0px 15px 0px;
     position: fixed;
     bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #000;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-
 .content-software .messages .input-message input {
+    width: 100%;
     padding-right: 75px;
 }
 

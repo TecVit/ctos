@@ -51,7 +51,6 @@ const Software = () => {
     const handleSetCpf = (valor) => {
         try {
             const cpf = valor.replace(/\D/g, '');
-            console.log(cpf)
             if (valor.length === 0) {
                 setCPF('');
                 return;
@@ -165,6 +164,7 @@ const Software = () => {
 
                 {mdApps && (
                     <article className='apps'>
+                        <h1 className='tag'>ShadowTouch</h1>
                         <div onClick={handleMdCPFs} className='app'>
                             <IoIosSearch className='icon' />
                             <p>Searches</p>
@@ -184,6 +184,8 @@ const Software = () => {
 
                 {mdCPFs && (
                     <article className='searches'>
+
+                        <h1 className='tag'>ShadowTouch</h1>
                         <h1>Search Data By CPF</h1>
                         <input value={CPF} maxLength={11} onChange={(e) => handleSetCpf(e.target.value)} className='input-principal' type='text' placeholder='CPF' />
                         <div className='wd-100 flex row'>
@@ -221,6 +223,8 @@ const Software = () => {
                     <>
                         {mdMessages ? (
                             <article className='messages'>
+
+                                <h1 className='tag'>ShadowTouch</h1>
                                 <h1>
                                     Messages Anonymoys <br />
                                     Room ID: {roomId}
@@ -241,12 +245,13 @@ const Software = () => {
                                     <h2>Not found message</h2>
                                 )}
                                 <div className='input-message'>
-                                    <input onChange={(e) => setMessage(e.target.value)} value={message} className='input-principal' type='text' placeholder='Message'/>
+                                    <input onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()} onChange={(e) => setMessage(e.target.value)} value={message} className='input-principal' type='text' placeholder='Message'/>
                                     <IoIosSend className='icon' onClick={handleSendMessage} />
                                 </div>
                             </article>
                         ) : (
                             <article className='searches'>
+                                <h1 className='tag'>ShadowTouch</h1>
                                 <h1>Enter a Room</h1>
                                 <input value={roomId} maxLength={6} onChange={(e) => handleSetRoomId(e.target.value)} className='input-principal' type='text' placeholder='Room ID' />
                                 <div className='wd-100 flex row'>

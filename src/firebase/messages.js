@@ -59,6 +59,9 @@ const checkRoomExists = async (roomId) => {
 }
 
 const sendMessage = async (roomId, message) => {
+    if (!message || message === '') {
+        return;
+    }
     try {
         const messageRef = await database.ref(`anonymous/messages/${roomId}`);
         
