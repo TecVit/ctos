@@ -42,21 +42,21 @@ function restringirDado(dado) {
 const searchCPF = async (cpf) => {
     if (!cpf) {
         await Swal({
-            title: 'Digite um CPF!',
+            title: 'Enter a CPF!',
             icon: 'warning',
         });
         return false;
     }
     if (cpf.length < 11) {
         await Swal({
-            title: 'CPF menor que 11 dígitos!',
+            title: 'CPF less than 11 digits!',
             icon: 'warning',
         });
         return false;
     } 
     if (cpf.length > 11) {
         await Swal({
-            title: 'CPF maior que 11 dígitos!',
+            title: 'CPF greater than 11 digits!',
             icon: 'warning',
         });
         return false;
@@ -87,7 +87,7 @@ const searchCPF = async (cpf) => {
 
         } else {
             await Swal({
-                title: 'CPF não cadastrado no banco de dados!',
+                title: 'CPF not registered in the database!',
                 icon: 'error',
             });
             return false;

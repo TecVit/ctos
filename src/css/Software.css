@@ -38,6 +38,7 @@
     flex-direction: column;
     cursor: pointer;
     border: 3px solid var(--four);
+    user-select: none;
 } .content-software .apps .app:hover {
     background: transparent;
     border: 3px solid var(--eleven);
@@ -198,4 +199,112 @@
     position: absolute;
     left: 2.5%;
     bottom: -22.5px;
+}
+
+/* MESSAGES */
+
+.content-software .messages {
+    width: 90%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 30px 0px 130px 0px;
+}
+
+.content-software .messages h1 {
+    width: 95%;
+    height: auto;
+    margin: 5px auto 10px auto;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    line-height: 30px;
+    font-family: var(--glitch);
+    text-align: center;
+}
+
+/* NOT FOUND MESSAGE */
+.content-software .messages h2 {
+    width: 95%;
+    height: auto;
+    margin: 5px auto 10px auto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.content-software .messages .message {
+    width: 95%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    margin: 12px auto;
+    background: var(--eight);
+    padding: 10px 14px;
+    border-radius: 4px;
+    color: var(--three);
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 4px 4px 2px var(--six);
+}
+
+.content-software .messages .message p {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    word-break: break-all;
+    margin: 0px auto 5px 0px;
+    font-size: 16.5px;
+    font-weight: 650;
+} 
+
+.content-software .messages .message p strong {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-family: var(--glitch);
+    margin: 0px 2px 0px 0px;
+}
+
+.content-software .messages .message a {
+    margin: 0px auto 0px 0px;
+}
+
+.content-software .messages .input-message {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 12.5px 0px 15px 0px;
+    position: fixed;
+    bottom: 0px;
+    background: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content-software .messages .input-message .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 45px;
+    padding: 4px 4px 4px 4px;
+    cursor: pointer;
+    background: var(--two);
+    border: 2px solid var(--two);
+    margin: 0px;
+}
+
+.content-software .messages .input-message .icon:hover {
+    background: transparent;
+    color: var(--two);
 }
