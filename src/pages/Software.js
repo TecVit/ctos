@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../css/Software.css';
 import { auth, dbCPFs, logar } from '../firebase/login';
 import swal from 'sweetalert';
-import { getCookie, setCookie, deleteCookie } from '../firebase/cookies';
+import { getCookie, setCookie, deleteCookie, limparCookies } from '../firebase/cookies';
 import { searchCPF } from '../firebase/cpfs';
 import { database, checkRoomExists, createRoom, getMessages, sendMessage } from '../firebase/messages';
 
@@ -24,7 +24,20 @@ const Software = () => {
     
     const emailLocal = getCookie('email');
     const senhaLocal = getCookie('senha');
-         
+            
+    if (emailLocal && senhaLocal) {
+        auth.onAuthStateChanged( async function(user) {
+            if (user) {
+                const email = await user.email;
+                if (emailLocal !== email) {
+                    await localStorage.clear();
+                    await limparCookies();
+                    window.location.href = "/login/";
+                }
+            }
+        });
+    }
+
     
     // CPFS
     const [CPF, setCPF] = useState('');
@@ -210,7 +223,7 @@ const Software = () => {
                             <article className='messages'>
                                 <h1>
                                     Messages Anonymoys <br />
-                                    Room ID: 021021
+                                    Room ID: {roomId}
                                 </h1>
                                 {Object.values(messages).length > 1 ? (
                                     Object.entries(messages).map(([key, value]) => {

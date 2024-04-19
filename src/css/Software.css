@@ -217,7 +217,7 @@
 .content-software .messages h1 {
     width: 95%;
     height: auto;
-    margin: 5px auto 10px auto;
+    margin: 5px auto 15px auto;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.4px;
@@ -246,7 +246,7 @@
     align-items: flex-end;
     justify-content: center;
     position: relative;
-    margin: 12px auto;
+    margin: 12.5px auto;
     background: var(--eight);
     padding: 10px 14px;
     border-radius: 4px;
@@ -293,18 +293,22 @@
     align-items: center;
 }
 
+
+.content-software .messages .input-message input {
+    padding-right: 75px;
+}
+
 .content-software .messages .input-message .icon {
     position: absolute;
-    right: 8px;
-    font-size: 45px;
-    padding: 4px 4px 4px 4px;
+    right: 0px;
+    font-size: 55px;
+    padding: 5px;
     cursor: pointer;
     background: var(--two);
-    border: 2px solid var(--two);
     margin: 0px;
 }
 
 .content-software .messages .input-message .icon:hover {
-    background: transparent;
-    color: var(--two);
+    background: var(--four);
+    color: var(--eight);
 }
