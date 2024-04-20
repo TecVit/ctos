@@ -62,7 +62,7 @@ const searchCPF = async (cpf) => {
         return false;
     }
     try {
-        const docCpf = await dbCPFs.collection('dados').doc(cpf);
+        const docCpf = await dbCPFs.collection('cpfs').doc(cpf);
         const docCpfExists = await docCpf.get();
         if (docCpfExists.exists) {
 /*
